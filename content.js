@@ -15,7 +15,7 @@ function countTime(section){
         if(text !== ""){
             if(text.includes("m")){
                 minutes += Number(text.split("m")[0]);
-                seconds += parseInt(text.split("m")[1])
+                seconds += text.includes("s")?parseInt(text.split("m")[1]):0;
             } else {
                 seconds += parseInt(text);
             }
